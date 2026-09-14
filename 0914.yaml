@@ -1,0 +1,34 @@
+Resourses:
+
+vpc1:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: 10.0.0.0/16
+    EnableDnsSupport: true
+    EnableDnsHostnames: true
+    tags: 
+      - Key: Name
+        Value: 0914test-vpc-1
+      - Key: month
+        Value: "202609"
+
+vpc2:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: 172.20.0.0/16
+    EnableDnsSupport: true
+    EnableDnsHostnames: true
+    tags:
+      - Key: Name
+        Value: 0914test-vpc-2
+      - Key: month
+        Value: "202609"
+
+internetGateway:
+  Type: AWS::EC2::InternetGateway
+  Properties:
+    tags:
+      - Key:Name
+        Value:0914test-igw
+
+
